@@ -1,7 +1,30 @@
 .header {
   position: fixed;
   display: flex;
+  align-items: center;
+  width: 100%;
+  margin-top: 10px;
+}
+.title {
+  width: 100%;
+  font-size: 1.5rem;
+}
+.navigationBar {
+  float: right;
+  width: 100%;
+  display: flex;
+  justify-content: flex-end;
+  margin-right: 40px;
+}
+.nav {
+  margin: 0 10px;
 }
 .contents {
-  margin-top: 70px;
+  padding-top: 40px;
+}
+
+@media screen and (max-width:750px){
+  .title {
+    font-size: 1.2rem;
+  }
 }
