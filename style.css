@@ -61,6 +61,9 @@
   display: flex;
   padding: 50px;
 }
+.icon-bo{
+  width: 100%;
+}
 .profile-icon {
   position:relative;
   overflow: hidden;
@@ -79,6 +82,7 @@
 }
 .profile-text {
   margin-left: 70px;
+  width: 100%;
 }
 
 /*Skill*/
@@ -114,6 +118,17 @@
   width: 100%;
   height: 300px;
   overflow: hidden;
+}
+.portfolio-title {
+  font-size: 20px;
+}
+.explanation-title {
+  margin-top: 10px;
+  font-weight: bold;
+}
+.external-text {
+  color: rgb(176, 176, 176);
+  font-weight: bold;
 }
 
 /*Contact*/
@@ -156,6 +171,9 @@ a.fas {
   text-decoration: none;
 }
 
+.space {
+  margin-top: 10px;
+}
 
 @media screen and (max-width:750px){
   .title {
