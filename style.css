@@ -61,8 +61,7 @@
   display: flex;
   padding: 50px;
 }
-.icon-bo{
-  width: 100%;
+.iconbox{
 }
 .profile-icon {
   position:relative;
@@ -179,6 +178,9 @@ a.fas {
   .title {
     font-size: 1.5rem;
   }
+  .iconbox{
+    margin: 0 auto;
+  }
   .profile{
     flex-direction: column;
     text-align: center;
@@ -189,7 +191,6 @@ a.fas {
     flex-direction: column;
     text-align: center;
     justify-content: center;
-    margin-left: 30%;
   }
   .profile-text {
     margin-top: 30px;
