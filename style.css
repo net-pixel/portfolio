@@ -10,7 +10,7 @@
 }
 .title {
   margin-left: 20px;
-  width: 100%;
+  width: 70%;
   font-size: 2rem;
 }
 .navigationBar {
@@ -35,13 +35,11 @@
 .top-image p {
   position: absolute;
   top: 50%;
-  left: 50%;
+  left: 28%;
   margin:0;
   padding:0;
-  transform: translate(-50%,-50%);
-  -webkit-transform: translate(-50%,-50%);
-  -ms-transform: translate(-50%,-50%);
   font-size: 6vw;
+  width: 100%;
 }
 /*ボディ*/
 .contents {
@@ -174,9 +172,17 @@ a.fas {
   margin-top: 10px;
 }
 
+@media screen and (max-width:940px){
+  .nav {
+    font-size: 1rem;
+  }
+}
+
 @media screen and (max-width:750px){
-  .title {
-    font-size: 1.5rem;
+  /*Profile*/
+  .top-image p {
+    font-size: 8vw;
+    left: 23%;
   }
   .iconbox{
     margin: 0 auto;
@@ -195,5 +201,111 @@ a.fas {
   .profile-text {
     margin-top: 30px;
     margin-left: 0px;
+  }
+  
+  /*Navigation*/
+  .header {
+    flex-direction: column;
+  }
+  .title {
+    font-size: 1.7rem;
+    margin-left: 10px;
+    width: 100%;
+    line-height: 50px;
+  }
+  .toggle {
+    position: fixed;
+    top: 6px;
+    right: 20px;
+    width: 40px;
+    height: 40px;
+    /* border-radius: 50%; */
+    /* background: #000; */
+    cursor: pointer;
+    z-index: 1;
+    border-color: transparent;
+  }
+  .toggle:before{
+    content: '+';
+    position: absolute;
+    top: 0;
+    left: 0;
+    font-size: 40px;
+    width: 100%;
+    height: 100%;
+    color: #000;
+    text-align: center;
+    line-height: 35px;
+    border-radius: 50%;
+    /* background: #000; */
+    transition: 0.5s;
+  }
+  .toggle.active:before {
+    transform: rotate(135deg);
+    /* background: rgb(3, 57, 220); */
+    /* color: #000; */
+    border-color: transparent;
+  }
+
+  .overlay {
+    position: fixed;
+    top: 10px;
+    right: 20px;
+    width: 40px;
+    height: 40px;
+    border-radius: 50%;
+    background: rgba(255, 255, 255, 0.941);
+    transition: transform 0.5s;
+  }
+  .overlay.active {
+    transform: scale(100, 100);
+  }
+  .navigationBar {
+    width: 100%;
+    height: 100%;
+    overflow: auto;
+    visibility: hidden;
+  }
+  .navigationBar.active {
+    visibility: visible;
+    transition-delay: 0.2s;
+  }
+  .navigationBar ul {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, 30%);
+    margin: 0;
+    padding: 0;
+    display: flex;
+    flex-direction: column;
+  }
+  .navigationBar ul a {
+    position: relative;
+    font-size: 2rem;
+    margin: 10px auto;
+    display: block;
+    text-shadow: 0 2px 5px rgba(0,0,0, .5);
+    z-index: 1;
+  }
+  /* .navigationBar ul a:before {
+    content: '';
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    width: 100%;
+    height: 20px;
+    background: rgba(116, 216, 244, 0.804);
+    z-index: -1;
+    transform: scaleX(0);
+    transform-origin: left;
+    transition: transform 0.5s;
+  } */
+  .navigationBar ul a:hover:before {
+    /* transform: scaleX(1); */
+  }
+  .navigationBar ul a:hover {
+    /* transform: scaleX(1); */
+    color: rgb(165, 164, 164);
   }
 }

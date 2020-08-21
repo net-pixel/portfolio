@@ -13,12 +13,16 @@
 <main>
   <div  class="header">
     <div class="title">masa's portfolio</div>
+    <div class="overlay"></div>
+    <div class="toggle"></div>
     <div class="navigationBar">
-      <a class="nav" href="index.html#about">About</a>
-      <a class="nav" href="index.html#skill">Skills</a>
-      <a class="nav" href="index.html#portfilio">Portfolio</a>
-      <a class="nav" href="index.html#contact">Contact</a>
-      <a class="nav" href="https://onandoff.herokuapp.com/articles" target="_blank">Blog</a>
+      <ul>
+        <a class="nav" href="index.html#about">About</a>
+        <a class="nav" href="index.html#skill">Skills</a>
+        <a class="nav" href="index.html#portfilio">Portfolio</a>
+        <a class="nav" href="index.html#contact">Contact</a>
+        <a class="nav" href="https://onandoff.herokuapp.com/articles" target="_blank">Blog</a>
+      </ul>
     </div>
   </div>
   <div class="top-image">
@@ -152,6 +156,22 @@
   </div>
 
 </main>
+<script src="https://code.jquery.com/jquery-3.5.1.js"></script>
+  <script type="text/javascript">
+    $(document).ready(function(){
+      $('.toggle').on('click', function(){
+        $('.toggle').toggleClass('active')
+        $('.overlay').toggleClass('active')
+        $('.navigationBar').toggleClass('active')
+      })
+      $('.nav').on('click', function(){
+        $('.toggle').toggleClass('active')
+        $('.overlay').toggleClass('active')
+        $('.navigationBar').toggleClass('active')
+      })
+    })
+  </script>
+
 <!-- <script src="jquery.min.js"></script>
 <script src="skrollr.min.js"></script>
 <script type="text/javascript">
