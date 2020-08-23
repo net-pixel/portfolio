@@ -7,6 +7,7 @@
   background-color: white;
   height: 50px;
   z-index: 1;
+  overflow: hidden;
 }
 .title {
   margin-left: 20px;
@@ -31,6 +32,7 @@
 /*背景イメージ*/
 .top-image {
   position: relative;
+  overflow: hidden;
 }
 .top-image p {
   position: absolute;
@@ -55,6 +57,9 @@
 }
 
 /*About*/
+body{
+  width: 100%;
+}
 .profile{
   display: flex;
   padding: 50px;
