@@ -7,7 +7,6 @@
   background-color: white;
   height: 50px;
   z-index: 1;
-  overflow: hidden;
 }
 .title {
   margin-left: 20px;
@@ -119,7 +118,6 @@ body{
 .portfolio-image {
   width: 100%;
   height: 300px;
-  overflow: hidden;
 }
 .portfolio-title {
   font-size: 20px;
@@ -268,7 +266,7 @@ a.fas {
   .navigationBar {
     width: 100%;
     height: 100%;
-    overflow: auto;
+    /* overflow: auto; */
     visibility: hidden;
   }
   .navigationBar.active {
